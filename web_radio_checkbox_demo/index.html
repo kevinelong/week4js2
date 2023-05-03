@@ -29,8 +29,28 @@
     <label>
         <input type="checkbox" id="drink" checked="checked"> Add Drink
     </label>
+    <p>
+        <button id="order">Order</button>
+    </p>
+    <p id="order_output"></p>
 </body>
 <script>
+    document.getElementById("order").addEventListener("click", ()=>{
+        
+        let wantsFries = document.getElementById("fries").checked; //boolean
+        let wantsDrink = document.getElementById("drink").checked; //boolean
+        
+        const when = document.querySelector('input[name=when]:checked').value;
+
+        document.getElementById("order_output").innerHTML = `
+            Fries: ${wantsFries} <br>
+            Drink: ${wantsDrink} <br>
+            When: ${when} <br>
+        `; // end inner html for order output
+    
+    });//end order click
+    
+    
     const date = document.getElementById("date");
     const go = document.getElementById("go");
     const results_block = document.getElementById("results_block");

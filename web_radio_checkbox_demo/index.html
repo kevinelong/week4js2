@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background:#333333;color:#dddddd;font-family:sans-serif;">
+<p>Input types demo</p>
+<input id="date" type="date" value="1967-09-13">
+<button id="go">GO!</button>
+<p id="results_block">Results will be here,</p>
+<input id="results_input" value="and also here">
+    <p>        When is best? </p>
+    <label>
+        <input type="radio" name="when" value="morning"> Morning
+    </label><br>
+    <label>
+        <input type="radio" name="when" value="afternoon"> Afternoon
+    </label><br>
+    <label>
+        <input type="radio" name="when" value="evening" checked> Evening
+    </label><br>
+    <br>
+    <label>
+        <input type="checkbox" id="fries" checked="checked"> Add Fries
+    </label><br>  
+    <label>
+        <input type="checkbox" id="drink" checked="checked"> Add Drink
+    </label>
+</body>
+<script>
+    const date = document.getElementById("date");
+    const go = document.getElementById("go");
+    const results_block = document.getElementById("results_block");
+    const results_input = document.getElementById("results_input");
+    go.addEventListener("click", ()=>{
+        const text = date.value;
+        let d = new Date(text);
+        let output = d.toLocaleDateString();
+        results_block.innerHTML = output;
+        results_input.value = output;
+    }); //end button click
+</script>
+</html>

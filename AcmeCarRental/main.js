@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             gps.checked, 
             roadside.checked, 
             under25.checked
-        );
+        )
         output.innerHTML = getTextResults(results);
     });//end estimate click
 

@@ -23,6 +23,10 @@ function calculate(
     }
 }
 
+function dollars(amount){
+    return `$${amount.toFixed(2)}`;
+}
+
 //TEST
 console.log(calculate(2,true,true,true,true,true));
 console.log(calculate(2,false,false,false,false,false));

@@ -27,15 +27,15 @@ function getRateData(days, tag, gps, roadside, under25 ) {
         totalDue: totalDue
     }
 }
-//TEST
-function displayResults(results){
-    console.log(`
+// //TEST
+function getTextResults(results){
+    return `
     Car Rental:         $${results.rentalAmount.toFixed(2)}
     Options:            $${results.optionsAmount.toFixed(2)}
     Under 25 Surcharge: $${results.surchargeAmount.toFixed(2)}
 
     Car Rental:         $${results.totalDue.toFixed(2)}
-    `);
+    `;
 }
-displayResults(getRateData( 10, true, true, true, true));
-displayResults(getRateData( 10, false, false, false, false));
+console.log(getTextResults(getRateData( 10, true, true, true, true)));
+console.log(getTextResults(getRateData( 10, false, false, false, false)));

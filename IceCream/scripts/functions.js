@@ -8,13 +8,13 @@ function calculate(
 ) {
     RATE = 0.08
     let price = 1 + (1.25 * scoopCount);
-    if(isCup){
+    if (isCup) {
         price += wantsSprinkles ? 0.50 : 0;
         price += wantsHotFudge ? 1.25 : 0;
         price += wantsWhippedCream ? 0.25 : 0;
         price += wantsCherry ? 0.25 : 0;
     }
-    const tax = price * RATE;     
+    const tax = price * RATE;
     const total = price + tax;
     return { //new object
         price: price,
@@ -23,10 +23,10 @@ function calculate(
     }
 }
 
-function dollars(amount){
+function dollars(amount) {
     return `$${amount.toFixed(2)}`;
 }
 
 //TEST
-console.log(calculate(2,true,true,true,true,true));
-console.log(calculate(2,false,false,false,false,false));
+console.log(calculate(2, true, true, true, true, true));
+console.log(calculate(2, false, false, false, false, false));

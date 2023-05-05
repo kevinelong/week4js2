@@ -1,0 +1,52 @@
+
+<body></body>
+<script>
+    const people = [
+        {
+            name: "Harry Potter",
+            special: "magick powers"
+        },
+        {
+            name: "Dumbledor",
+            special: "elder wizard"
+        },
+        {
+            name: "Storm (Ororo Monroe)",
+            special: "Controls Weather"
+        },
+        {
+            name: "Wolverine (Logan)",
+            special: "Adamantium Claws and Regeneration"
+        },
+        {
+            name: "Prof X",
+            special: "Telekenisis"
+        },        
+        {
+            name: "Nightcrawler (Kurt Wagner)",
+            special: "Teleportation"
+        },        
+        {
+            name: "Magneto",
+            special: "Telekenisis"
+        },
+    ];
+
+    people.forEach((person)=>{
+        document.body.innerHTML += `
+           <div class="box"> 
+            <h4>${person.name}</h4>
+            <div> ${ person.special } </div> 
+            </div>
+        `;
+    });// end for each
+</script>
+<style>
+    .box{
+        border: 1px solid black;
+        max-width: 12em;
+        margin: 1em;
+        padding: 1em;
+        display: inline-block;
+    }
+</style>
